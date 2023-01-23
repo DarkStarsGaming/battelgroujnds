@@ -153,34 +153,24 @@ while getgenv().Settings.JetGatling == true do
 	local ohString2 = "JetGatling"
 	local ohTable3 = {
 		["MouseRay"] = {
-			["Normal"] = 0, 1, 0,
-			["Direction"] = 245.07310485839844, -24.83778953552246, 171.23744201660156,
-			["Origin"] = 606.2717895507812, 746.0980224609375, 370.7700500488281,
-			["Instance"] = workspace.Map.Model.Part,
-			["Distance"] = 191.37698364257812,
-			["Position"] = 762.609619140625, 730.25341796875, 480.00640869140625,
-			["Material"] = Enum.Material.Foil
+			["Normal"] = 1, 0, 0,
+			["Direction"] = -199.17288208007812, -15.196318626403809, -223.8285369873047,
+			["Origin"] = -518.4501953125, 702.59814453125, -57.67285919189453,
+			["Instance"] = workspace.Map.Part,
+			["Distance"] = 9.706645011901855,
+			["Position"] = -524.89453125, 702.1064453125, -64.9149398803711,
+			["Material"] = Enum.Material.Slate
 		}
 	}
 
-	game:GetService("ReplicatedStorage").Replicator:InvokeServer(ohString1, ohString2, ohTable3)
+	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
 end
 
 while getgenv().Settings.RedHawk == true do
 	wait(0.5)
 	local ohString1 = "TSRubber"
 	local ohString2 = "RedHawk"
-	local ohTable3 = {
-		["MouseRay"] = {
-			["Normal"] = 0, 1, 0,
-			["Direction"] = 245.07310485839844, -24.83778953552246, 171.23744201660156,
-			["Origin"] = 606.2717895507812, 746.0980224609375, 370.7700500488281,
-			["Instance"] = workspace.Map.Model.Part,
-			["Distance"] = 191.37698364257812,
-			["Position"] = 762.609619140625, 730.25341796875, 480.00640869140625,
-			["Material"] = Enum.Material.Foil
-		}
-	}
+	local ohTable3 = {}
 
-	game:GetService("ReplicatedStorage").Replicator:InvokeServer(ohString1, ohString2, ohTable3)
+	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
 end
