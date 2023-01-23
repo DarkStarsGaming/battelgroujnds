@@ -71,27 +71,6 @@ if getgenv().Settings.redeemAllCodes == true then
 	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))    
 end
 
-while getgenv().Settings.JetGatling == true do
-	wait(0.5)
-	local ohString1 = "TSRubber"
-	local ohString2 = "JetGatling"
-	local ohTable3 = {
-		["MouseRay"] = {
-			["Normal"] = 1, 0, 0,
-			["Direction"] = -199.17288208007812, -15.196318626403809, -223.8285369873047,
-			["Origin"] = -518.4501953125, 702.59814453125, -57.67285919189453,
-			["Instance"] = workspace.Map.Part,
-			["Distance"] = 9.706645011901855,
-			["Position"] = -524.89453125, 702.1064453125, -64.9149398803711,
-			["Material"] = Enum.Material.Slate
-		}
-	}
-
-	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
-end
-
-
-
 
 
 
@@ -128,16 +107,6 @@ while getgenv().Settings.fastSpin == true do
 	end
 end
 
-
-while getgenv().Settings.RedHawk == true do
-	wait(0.5)
-	local ohString1 = "TSRubber"
-	local ohString2 = "RedHawk"
-	local ohTable3 = {}
-
-	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
-end
-
  
 while getgenv().Settings.normalSpin == true do
 	wait(0.5)
@@ -161,6 +130,8 @@ end
 
 
 
+
+
 while getgenv().Settings.JetPistol == true do
 	wait(0.5)
 	local ohString1 = "TSRubber"
@@ -178,4 +149,34 @@ while getgenv().Settings.JetPistol == true do
 	}
 
 	game:GetService("ReplicatedStorage").Replicator:InvokeServer(ohString1, ohString2, ohTable3)
+end
+
+while getgenv().Settings.GatlingJet == true do
+	wait(0.5)
+	local ohString1 = "TSRubber"
+	local ohString2 = "JetGatling"
+	local ohTable3 = {
+		["MouseRay"] = {
+			["Normal"] = 1, 0, 0,
+			["Direction"] = -199.17288208007812, -15.196318626403809, -223.8285369873047,
+			["Origin"] = -518.4501953125, 702.59814453125, -57.67285919189453,
+			["Instance"] = workspace.Map.Part,
+			["Distance"] = 9.706645011901855,
+			["Position"] = -524.89453125, 702.1064453125, -64.9149398803711,
+			["Material"] = Enum.Material.Slate
+		}
+	}
+
+	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
+end
+
+
+
+while getgenv().Settings.RedHawk == true do
+	wait(0.5)
+	local ohString1 = "TSRubber"
+	local ohString2 = "RedHawk"
+	local ohTable3 = {}
+
+	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
 end
