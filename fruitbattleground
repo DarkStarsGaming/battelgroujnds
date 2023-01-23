@@ -70,10 +70,13 @@ if getgenv().Settings.redeemAllCodes == true then
 end
 
 makefolder("fruitbattlegrounds")
+
+writefile("fruitbattlegrounds\\TSRubber.txt", "")
 local ifNoFruit = readfile("fruitbattlegrounds\\TSRubber.txt")
 if ifNoFruit == "" then
     writefile("fruitbattlegrounds\\TSRubber.txt", "TSRubber Fruits Gotten: 0")
 end
+ 
  
 while getgenv().Settings.fastSpin == true do
 	wait(0.5)
