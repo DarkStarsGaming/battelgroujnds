@@ -6,4 +6,4 @@ local args = {
     }
 }
 
-game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args)
+game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
