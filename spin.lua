@@ -1,4 +1,4 @@
-Local args = {
+local args = {
     [1] = "FruitsHandler",
     [2] = "Spin",
     [3] = {}
