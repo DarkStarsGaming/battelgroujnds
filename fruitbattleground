@@ -74,6 +74,7 @@ while getgenv().Settings.fastSpin == true then
     if getgenv().Settings.fruit == "TSRubber" then 
         if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
             print("You got TSRubber") 
+            getgenv().Settings.fastSpin == false
             return
         else
             print("Sorry you did not get TSRubber")
@@ -94,6 +95,7 @@ while getgenv().Settings.normalSpin == true then
     wait(0.1)
     if getgenv().Settings.fruit == "TSRubber" then 
         if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
+            getgenv().Settings.normalSpin == false
             print("You got TSRubber") 
             return
         else
