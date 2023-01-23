@@ -71,9 +71,7 @@ end
 
 makefolder("fruitbattlegrounds")
 
-writefile("fruitbattlegrounds\\TSRubber.txt", "")
-local ifNoFruit = readfile("fruitbattlegrounds\\TSRubber.txt")
-if ifNoFruit == "" then
+if not isfile("fruitbattlegrounds\\TSRubber.txt") then
     writefile("fruitbattlegrounds\\TSRubber.txt", "TSRubber Fruits Gotten: 0")
 end
  
