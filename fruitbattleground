@@ -69,28 +69,42 @@ if getgenv().Settings.redeemAllCodes == true then
     game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))    
 end
 
-if getgenv().Settings.fastSpin == true then
-    local args = {
-        [1] = "FruitsHandler",
-        [2] = "Spin",
-        [3] = {
-            ["Type"] = "Fast"
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+while getgenv().Settings.fastSpin == true then
+    wait(0.1)
+    if getgenv().Settings.fruit == "TSRubber" then 
+        if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
+            print("You got TSRubber") 
+            return
+        else
+            print("Sorry you did not get TSRubber")
+            local args = {
+                [1] = "FruitsHandler",
+                [2] = "Spin",
+                [3] = {
+                    ["Type"] = "Fast"
+                }
+            }
+                
+            game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+        end
+    end
 end
 
-if getgenv().Settings.normalSpin == true then
-    local args = {
-        [1] = "FruitsHandler",
-        [2] = "Spin",
-        [3] = {}
-    }
-    
-    game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
-end
-
-if getgenv().Settings.fruit == "TSRubber" then
-    print("TSRubber")
+while getgenv().Settings.normalSpin == true then
+    wait(0.1)
+    if getgenv().Settings.fruit == "TSRubber" then 
+        if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
+            print("You got TSRubber") 
+            return
+        else
+            print("Sorry you did not get TSRubber")
+            local args = {
+                [1] = "FruitsHandler",
+                [2] = "Spin",
+                [3] = {}
+            }
+            
+            game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+        end
+    end
 end
