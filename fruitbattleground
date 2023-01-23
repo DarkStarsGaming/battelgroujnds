@@ -171,4 +171,20 @@ while getgenv().Settings.autoFarmXP == true do
 	local ohTable3 = {}
 
 	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
+	wait(0.5)
+	local ohString1 = "TSRubber"
+	local ohString2 = "GrizzlyMagnum"
+	local ohTable3 = {
+		["MouseRay"] = {
+			["Normal"] = 0.3826832175254822, 0.00034344170126132667, -0.9238795042037964,
+			["Direction"] = 9.939618110656738, 2.0369832515716553, 299.8283996582031,
+			["Origin"] = 625.7813720703125, 740.562255859375, 352.1143493652344,
+			["Instance"] = workspace.Map.collosseum.Cylinder,
+			["Distance"] = 145.2707061767578,
+			["Position"] = 630.594482421875, 741.5486450195312, 497.30194091796875,
+			["Material"] = Enum.Material.Brick
+		}
+	}
+
+	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
 end
