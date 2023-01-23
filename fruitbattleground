@@ -132,7 +132,7 @@ end
 
 
 
-while getgenv().Settings.JetPistol == true do
+while getgenv().Settings.autoFarmXP == true do
 	wait(0.5)
 	local ohString1 = "TSRubber"
 	local ohString2 = "JetPistol"
@@ -149,9 +149,6 @@ while getgenv().Settings.JetPistol == true do
 	}
 
 	game:GetService("ReplicatedStorage").Replicator:InvokeServer(ohString1, ohString2, ohTable3)
-end
-
-while getgenv().Settings.GatlingJet == true do
 	wait(0.5)
 	local ohString1 = "TSRubber"
 	local ohString2 = "JetGatling"
@@ -168,11 +165,6 @@ while getgenv().Settings.GatlingJet == true do
 	}
 
 	game:GetService("ReplicatedStorage").ReplicatorNoYield:FireServer(ohString1, ohString2, ohTable3)
-end
-
-
-
-while getgenv().Settings.RedHawk == true do
 	wait(0.5)
 	local ohString1 = "TSRubber"
 	local ohString2 = "RedHawk"
