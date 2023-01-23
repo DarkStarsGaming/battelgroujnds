@@ -1,4 +1,3 @@
-
 if getgenv().Settings.redeemAllCodes == true then
     local args = {
         [1] = "Codes",
@@ -69,16 +68,26 @@ if getgenv().Settings.redeemAllCodes == true then
 	
 	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))    
 end
+
+makefolder("fruitbattlegrounds")
+local ifNoFruit = readfile("fruitbattlegrounds\\TSRubber.txt")
+if ifNoFruit == "" then
+    writefile("fruitbattlegrounds\\TSRubber.txt", "TSRubber Fruits Gotten: 0")
+end
  
 while getgenv().Settings.fastSpin == true do
 	wait(0.5)
 	if getgenv().Settings.fruit == "TSRubber" then 
 		if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
 			print("You got TSRubber") 
+			local fruitsGotten = readfile("fruitbattlegrounds\\TSRubber.txt")
+			local fruitGottenShortener = string.sub(fruitsGotten,25,26)
+
+			amountGotten = fruitGottenShortener+1
+			writefile("fruitbattlegrounds\\TSRubber.txt", "TSRubber Fruits Gotten: "..amountGotten)
 			getgenv().Settings.fastSpin = false
 			return
 		else
-			print("Sorry you did not get TSRubber")
 			local args = {
 				[1] = "FruitsHandler",
 				[2] = "Spin",
@@ -100,7 +109,6 @@ while getgenv().Settings.normalSpin == true do
 			print("You got TSRubber") 
 			return
 		else
-			print("Sorry you did not get TSRubber")
 			local args = {
 				[1] = "FruitsHandler",
 				[2] = "Spin",
