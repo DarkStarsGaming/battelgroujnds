@@ -1,3 +1,5 @@
+-- Redeem All Codes
+
 if getgenv().Settings.redeemAllCodes == true then
     local args = {
         [1] = "Codes",
@@ -69,12 +71,14 @@ if getgenv().Settings.redeemAllCodes == true then
 	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))    
 end
 
+-- Auto Spin
+
 makefolder("fruitbattlegrounds")
 
 if not isfile("fruitbattlegrounds\\TSRubber.txt") then
     writefile("fruitbattlegrounds\\TSRubber.txt", "TSRubber Fruits Gotten: 0")
 end
- 
+
  
 while getgenv().Settings.fastSpin == true do
 	wait(0.5)
@@ -119,4 +123,64 @@ while getgenv().Settings.normalSpin == true do
 			game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
 		end
 	end
+end
+
+
+-- AutoFarm
+
+while getgenv().Settings.JetPistol == true do
+	wait(0.5)
+	local ohString1 = "TSRubber"
+	local ohString2 = "JetPistol"
+	local ohTable3 = {
+		["MouseRay"] = {
+			["Normal"] = 0, 1, 0,
+			["Direction"] = 245.07310485839844, -24.83778953552246, 171.23744201660156,
+			["Origin"] = 606.2717895507812, 746.0980224609375, 370.7700500488281,
+			["Instance"] = workspace.Map.Model.Part,
+			["Distance"] = 191.37698364257812,
+			["Position"] = 762.609619140625, 730.25341796875, 480.00640869140625,
+			["Material"] = Enum.Material.Foil
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(ohString1, ohString2, ohTable3)
+end
+
+while getgenv().Settings.JetGatling == true do
+	wait(0.5)
+	local ohString1 = "TSRubber"
+	local ohString2 = "JetGatling"
+	local ohTable3 = {
+		["MouseRay"] = {
+			["Normal"] = 0, 1, 0,
+			["Direction"] = 245.07310485839844, -24.83778953552246, 171.23744201660156,
+			["Origin"] = 606.2717895507812, 746.0980224609375, 370.7700500488281,
+			["Instance"] = workspace.Map.Model.Part,
+			["Distance"] = 191.37698364257812,
+			["Position"] = 762.609619140625, 730.25341796875, 480.00640869140625,
+			["Material"] = Enum.Material.Foil
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(ohString1, ohString2, ohTable3)
+end
+
+while getgenv().Settings.RedHawk == true do
+	wait(0.5)
+	local ohString1 = "TSRubber"
+	local ohString2 = "RedHawk"
+	local ohTable3 = {
+		["MouseRay"] = {
+			["Normal"] = 0, 1, 0,
+			["Direction"] = 245.07310485839844, -24.83778953552246, 171.23744201660156,
+			["Origin"] = 606.2717895507812, 746.0980224609375, 370.7700500488281,
+			["Instance"] = workspace.Map.Model.Part,
+			["Distance"] = 191.37698364257812,
+			["Position"] = 762.609619140625, 730.25341796875, 480.00640869140625,
+			["Material"] = Enum.Material.Foil
+		}
+	}
+
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(ohString1, ohString2, ohTable3)
 end
