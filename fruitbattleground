@@ -1,3 +1,4 @@
+
 if getgenv().Settings.redeemAllCodes == true then
     local args = {
         [1] = "Codes",
@@ -6,105 +7,107 @@ if getgenv().Settings.redeemAllCodes == true then
             ["Code"] = "140KAGAIN"
         }
     }
-    
+     
     game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
     local args = {
         [1] = "Codes",
         [2] = "Redeem",
         [3] = {
             ["Code"] = "FATSTACKZ"
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
-    
-    local args = {
-        [1] = "Codes",
-        [2] = "Redeem",
-        [3] = {
-            ["Code"] = "ITJUSTDONTSTOP"
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
-    
-    local args = {
-        [1] = "Codes",
-        [2] = "Redeem",
-        [3] = {
-            ["Code"] = "RAININGGEMS!"
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
-    
-    local args = {
-        [1] = "Codes",
-        [2] = "Redeem",
-        [3] = {
-            ["Code"] = "GEARFOOOOURTH"
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
-    
-    local args = {
-        [1] = "Codes",
-        [2] = "Redeem",
-        [3] = {
-            ["Code"] = "LETSGOO130K"
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
-    
-    local args = {
-        [1] = "Codes",
-        [2] = "Redeem",
-        [3] = {
-            ["Code"] = "GOLDENDAYZ"
-        }
-    }
-    
-    game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))    
+		}
+	}
+	
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+	
+	local args = {
+		[1] = "Codes",
+		[2] = "Redeem",
+		[3] = {
+			["Code"] = "ITJUSTDONTSTOP"
+		}
+	}
+	
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+	
+	local args = {
+		[1] = "Codes",
+		[2] = "Redeem",
+		[3] = {
+			["Code"] = "RAININGGEMS!"
+		}
+	}
+	
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+	
+	local args = {
+		[1] = "Codes",
+		[2] = "Redeem",
+		[3] = {
+			["Code"] = "GEARFOOOOURTH"
+		}
+	}
+	
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+	
+	local args = {
+		[1] = "Codes",
+		[2] = "Redeem",
+		[3] = {
+			["Code"] = "LETSGOO130K"
+		}
+	}
+	
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+	
+	local args = {
+		[1] = "Codes",
+		[2] = "Redeem",
+		[3] = {
+			["Code"] = "GOLDENDAYZ"
+		}
+	}
+	
+	game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))    
 end
-
+ 
 while getgenv().Settings.fastSpin == true do
-    wait(0.5)
-    if getgenv().Settings.fruit == "TSRubber" then 
-        if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
-            print("You got TSRubber") 
-            getgenv().Settings.fastSpin = false
-            return
-        else
-            local args = {
-                [1] = "FruitsHandler",
-                [2] = "Spin",
-                [3] = {
-                    ["Type"] = "Fast"
-                }
-            }
-                
-            game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
-        end
-    end
+	wait(0.5)
+	if getgenv().Settings.fruit == "TSRubber" then 
+		if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
+			print("You got TSRubber") 
+			getgenv().Settings.fastSpin = false
+			return
+		else
+			print("Sorry you did not get TSRubber")
+			local args = {
+				[1] = "FruitsHandler",
+				[2] = "Spin",
+				[3] = {
+					["Type"] = "Fast"
+				}
+			}
+				
+			game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+		end
+	end
 end
-
+ 
 while getgenv().Settings.normalSpin == true do
-    wait(0.5)
-    if getgenv().Settings.fruit == "TSRubber" then 
-        if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
-            getgenv().Settings.normalSpin = false
-            print("You got TSRubber") 
-            return
-        else
-            local args = {
-                [1] = "FruitsHandler",
-                [2] = "Spin",
-                [3] = {}
-            }
-            
-            game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
-        end
-    end
+	wait(0.5)
+	if getgenv().Settings.fruit == "TSRubber" then 
+		if game:GetService("Players").LocalPlayer.PlayerGui.UI.Spin.Topbar.TxT.Text == "Fruit : TSRubber" then
+			getgenv().Settings.normalSpin = false
+			print("You got TSRubber") 
+			return
+		else
+			print("Sorry you did not get TSRubber")
+			local args = {
+				[1] = "FruitsHandler",
+				[2] = "Spin",
+				[3] = {}
+			}
+			
+			game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+		end
+	end
 end
